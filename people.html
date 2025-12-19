@@ -319,7 +319,7 @@
       .staff-content-wrapper > div:first-child {
         display: flex;
         width: 100%;
-        gap: 20px;
+        gap: 0px;
       }
 
       /* Left side: Text content */
@@ -328,6 +328,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-height: fit-content !important;
       }
 
       /* Right side: Image */
@@ -336,19 +337,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+         z-index: 100 !important;
       }
 
       .staff-image {
         max-width: 100%;
-        height: auto;
+        z-index: 100 !important;
+        height: 300px !important;
+        width: 300px !important;
+        overflow: visible !important;
         object-fit: cover;
-        border-radius: 8px;
+        object-position: right;
+        border-radius: 0px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .staff-name {
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
 
       .short-intro-container {
@@ -385,7 +391,6 @@
         width: 100%;
         height: 100%;
         z-index: 99999;
-
       }
 
       .modal-overlay {
@@ -501,7 +506,7 @@
         overflow-y: auto;
         font-size: 16px;
         line-height: 1.6;
-		background-color: white;
+        background-color: white;
       }
 
       .modal-body p {
@@ -560,8 +565,6 @@
       }
 
       @media (max-width: 576px) {
-        
-
         .modal-title {
           font-size: 20px;
         }
@@ -571,6 +574,10 @@
           padding: 15px;
         }
       }
+
+
+     
+
     </style>
     <link
       rel="stylesheet"
@@ -1129,7 +1136,8 @@
                 <div
                   class="elementor-column elementor-top-column elementor-element elementor-element-d6e169c"
                   data-id="d6e169c"
-                  data-element_type="column" style="width: 100%;"
+                  data-element_type="column"
+                  style="width: 100%"
                 >
                   <div
                     class="elementor-column-wrap elementor-element-populated"
@@ -1152,12 +1160,21 @@
                               data-element_type="column"
                               data-settings='{"background_background":"classic"}'
                             >
-                              <div
-                                class="elementor-column-wrap elementor-element-populated staff-content-wrapper"
-                              >
-                                <div class="" style="padding: 35px">
+                              <div class="staff-content-wrapper" >
+                                <div class="" >
                                   <!-- Left side: Text Content -->
-                                  <div class="text-content-side">
+                                  <div
+                                    class="text-content-side"
+                                    style="
+                                      padding-left: 35px;
+                                      padding-top: 35px;
+                                      padding-bottom: 35px;
+                                      background-color: lightgray;
+                                      margin-right: -2vw;
+                                      margin-top: 20px;
+                                      padding-right: 6vw;
+                                    "
+                                  >
                                     <div
                                       class="elementor-element elementor-element-30b7e08 elementor-widget elementor-widget-heading"
                                       data-id="30b7e08"
@@ -1166,7 +1183,7 @@
                                     >
                                       <div class="elementor-widget-container">
                                         <h2
-                                          class="elementor-heading-title elementor-size-default staff-name"
+                                          class=" staff-name"
                                         >
                                           Daniel Tanui
                                         </h2>
@@ -1175,14 +1192,14 @@
 
                                     <!-- Short Intro -->
                                     <div
-                                      class="elementor-element elementor-element-3699358 elementor-widget elementor-widget-text-editor short-intro-container"
+                                      class="short-intro-container"
                                       data-id="3699358"
                                       data-element_type="widget"
                                       data-widget_type="text-editor.default"
                                     >
                                       <div class="elementor-widget-container">
                                         <div
-                                          class="elementor-text-editor elementor-clearfix"
+                                          class="elementor-text-editor elementor-clearfix" style="padding-right: 3vw;"
                                         >
                                           <p>
                                             Deputy Head of Mission – Assists the
@@ -1203,16 +1220,15 @@
                                   </div>
 
                                   <!-- Right side: Image -->
-                                  <div class="image-side">
+                                  <div class="image-side" >
                                     <img
-                                      width="231"
-                                      height="231"
+                                      width="350"
+                                      height="350"
                                       src="./Home - Bitange Ndemo_files/Daniel Tanui.webp"
                                       class="attachment-large size-large wp-image-83 staff-image"
                                       alt="Daniel Tanui"
-                                      sizes="(max-width: 331px) 100vw, 331px"
-                                      srcset="./Home - Bitange Ndemo_files/Daniel Tanui.webp 331w"
-                                      data-ll-status="loaded"
+                                      sizes="(max-width: 500px) 100vw, 500px"
+                                      srcset="./Home - Bitange Ndemo_files/Daniel Tanui.webp 500w"
                                     />
                                   </div>
 
@@ -1234,29 +1250,28 @@
                                       Union (EU) relations. Previously worked at
                                       the Office of President and Provincial
                                       Administration before joining the Ministry
-                                      of Foreign Affairs. Amb. 
-									</p>
-									&nbsp;
-									<p>
-									  Daniel Tanui
-                                      served as Deputy Director -Peace and
-                                      Security in the Ministry Headquarters and
-                                      in the following of Kenya Missions abroad:
-                                      Kenya High Commission Harare, Zimbabwe,
-                                      Kenya Embassy- Stockholm, Kenya Embassy
-                                      Brasilia, Brazil, Kenya Embassy Doha,
-                                      Qatar and Kenya Embassy Khartoum, Sudan.
-                                      Amb. Daniel Tanui has a wealth of
-                                      experience in Foreign Policy and National
-                                      Security Strategy. He is a graduate of the
-                                      University of Nairobi- BA in Political
-                                      Science, MA in International Studies
-                                      (UON), Post -Graduate Diploma in Diplomacy
-                                      and International Relations (UON),
-                                      Executive Masters in Energy and Resources-
-                                      Hamad Bin Khalifa University-Qatar and is
-                                      an alumni of the National Defence College
-                                      of Kenya
+                                      of Foreign Affairs. Amb.
+                                    </p>
+                                    &nbsp;
+                                    <p>
+                                      Daniel Tanui served as Deputy Director
+                                      -Peace and Security in the Ministry
+                                      Headquarters and in the following of Kenya
+                                      Missions abroad: Kenya High Commission
+                                      Harare, Zimbabwe, Kenya Embassy-
+                                      Stockholm, Kenya Embassy Brasilia, Brazil,
+                                      Kenya Embassy Doha, Qatar and Kenya
+                                      Embassy Khartoum, Sudan. Amb. Daniel Tanui
+                                      has a wealth of experience in Foreign
+                                      Policy and National Security Strategy. He
+                                      is a graduate of the University of
+                                      Nairobi- BA in Political Science, MA in
+                                      International Studies (UON), Post
+                                      -Graduate Diploma in Diplomacy and
+                                      International Relations (UON), Executive
+                                      Masters in Energy and Resources- Hamad Bin
+                                      Khalifa University-Qatar and is an alumni
+                                      of the National Defence College of Kenya
                                     </p>
                                   </div>
                                 </div>
@@ -1374,8 +1389,8 @@
                                   <!-- Right side: Image -->
                                   <div class="image-side">
                                     <img
-                                      width="231"
-                                      height="231"
+                                      width="331"
+                                      height="331"
                                       src="./Home - Bitange Ndemo_files/Daniel Tanui.webp"
                                       class="attachment-large size-large wp-image-83 staff-image"
                                       alt="Daniel Tanui"
